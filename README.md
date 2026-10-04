@@ -40,3 +40,7 @@ DSH WebUI 一键截图插件：输入框旁的剪刀按钮 → 拉起本机截�
 ## 截图时隐藏 DSH 窗口（v0.1.1）
 
 截图期间 DSH 桌面窗口自动隐藏（Win32 ShowWindow，只针对 `hideProcessName` 指定的进程，默认 `DeepSeek Harness`）；截到图 / 取消 / 超时 / 90 秒兜底 / 插件卸载，五种路径都会自动恢复窗口。config 里 `hideWindow: false` 可关闭。
+### v0.3.4
+
+- 取消/超时路径恢复窗口改为 SW_SHOWNOACTIVATE（不抢焦点）——误判取消时不再打断截图遮罩的绘制；截图成功路径仍带焦点恢复。
+- 进程监视覆盖截图工具全家桶（ScreenClippingHost / SnippingTool / ScreenSketch，可用 config.watchProcesses 自定义），模式切换时的进程交接不再误判。
