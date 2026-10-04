@@ -1,6 +1,6 @@
 {
   "name": "@dsh-community/dsh-screenshot",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "DSH WebUI 一键截图：输入框旁按钮拉起本机截图工具，截完自动检测剪贴板新图并作为附件进入对话框（配合 dsh-paste-input 的上传协议与气泡折叠）",
   "type": "module",
   "main": "lib/index.js",
