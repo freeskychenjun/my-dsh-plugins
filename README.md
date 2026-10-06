@@ -9,10 +9,14 @@
 
 ## 安装（任一插件）
 
-以 dsh-skill-manager 为例，在 DSH 所在机器执行：
+以 dsh-skill-manager 为例，在 DSH 所在机器执行（pnpm 的 git 子目录语法，已实测 pnpm 11）：
 
 ```bash
-dsh plugin add github:freeskychenjun/my-dsh-plugins#main#path:plugins/dsh-skill-manager
+# 跟踪 main 分支最新
+dsh plugin add github:freeskychenjun/my-dsh-plugins#path:/plugins/dsh-skill-manager
+
+# 或钉死 commit（稳定复现，推荐）
+dsh plugin add github:freeskychenjun/my-dsh-plugins#<commit-sha>&path:/plugins/dsh-skill-manager
 ```
 
 然后在本机 profile 的 `cordis.patch.yml` 加 insert 行（这些插件没有 bundle patch，`plugin add` 只装依赖不挂载）：
