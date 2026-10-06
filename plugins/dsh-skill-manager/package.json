@@ -1,0 +1,28 @@
+{
+  "name": "@dsh-community/dsh-skill-manager",
+  "version": "0.1.0",
+  "description": "DSH 技能管理插件：设置页新增「技能管理」，浏览/搜索全部本地技能根目录，查看来源与遮蔽冲突，新建、编辑（内置 Markdown 编辑器）、启停、删除（回收站）与打开所在目录，保存即热生效。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ],
+      "platform": "web"
+    }
+  },
+  "files": [
+    "lib",
+    "LICENSE",
+    "README.md"
+  ],
+  "license": "MIT"
+}
